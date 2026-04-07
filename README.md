@@ -34,7 +34,7 @@
   </div>
 </div>
 
-> 🔗 **Live deployment:** [https://connectly.app](https://connectly.app)
+> 🔗 **Live deployment:** [https://connectly-tau.vercel.app/](https://connectly-tau.vercel.app/)
 
 ---
 
@@ -405,7 +405,7 @@ Connectly is optimized for deployment on any static host. The recommended approa
 3. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` as environment variables
 4. Deploy
 
-**Live instance:** [https://connectly.app](https://connectly.app)
+**Live instance:** [https://connectly-tau.vercel.app/](https://connectly-tau.vercel.app/)
 
 ---
 
