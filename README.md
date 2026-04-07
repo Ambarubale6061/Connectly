@@ -26,14 +26,14 @@
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="./public/hom.png" alt="Connectly — Home Feed & Stories" style="border-radius:12px;" />
+      <img src="./public/hom.png" alt="Connectly — Home & Profile" style="border-radius:12px;" />
       <br/>
-      <sub><b>Home Feed · Stories · Post Cards</b></sub>
+      <sub><b>Home Feed · Profile</b></sub>
     </td>
     <td align="center" width="50%">
-      <img src="./public/back.png" alt="Connectly — Real-Time Messaging" style="border-radius:12px;" />
+      <img src="./public/back.png" alt="Connectly — Message Reels Search" style="border-radius:12px;" />
       <br/>
-      <sub><b>Real-Time Messaging · DMs · Online Status</b></sub>
+      <sub><b>Real-Time Messaging · Reel · Search</b></sub>
     </td>
   </tr>
 </table>
