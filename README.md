@@ -432,8 +432,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 **Ambar Ubale**
 
 - 💼 Full Stack Developer
-- 🌐 Portfolio: https://your-portfolio-link.com
-- 🔗 LinkedIn: https://linkedin.com/in/your-profile
+- 🌐 Portfolio: https://ambarportfolio.vercel.app/
+- 🔗 LinkedIn: https://www.linkedin.com/in/ambar-ubale-137214230
 
 > Passionate about building real-world scalable apps & modern UI experiences.
 
