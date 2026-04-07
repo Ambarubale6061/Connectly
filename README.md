@@ -1,8 +1,6 @@
 <div align="center">
   <img src="./public/bl.png" alt="Connectly Logo" width="100" />
 
-  <h1>Connectly</h1>
-
   <p><strong>A full-stack Instagram-inspired social platform — built with React, TypeScript, Supabase, and real-time everything.</strong></p>
 
   <p>
@@ -23,20 +21,18 @@
 
 ## 📸 Screenshots
 
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <img src="./public/hom.png" alt="Connectly — Home & Profile" style="border-radius:12px;" />
-      <br/>
-      <sub><b>Home Feed · Profile</b></sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="./public/back.png" alt="Connectly — Message Reels Search" style="border-radius:12px;" />
-      <br/>
-      <sub><b>Real-Time Messaging · Reel · Search</b></sub>
-    </td>
-  </tr>
-</table>
+<div align="center" style="display: flex; justify-content: center; gap: 20px;">
+  <div style="width: 45%;">
+    <img src="./public/hom.png" alt="Connectly — Home & Profile" style="border-radius:12px; width: 100%;" />
+    <br/>
+    <sub><b>Home Feed · Profile</b></sub>
+  </div>
+  <div style="width: 45%;">
+    <img src="./public/back.png" alt="Connectly — Message Reels Search" style="border-radius:12px; width: 100%;" />
+    <br/>
+    <sub><b>Real-Time Messaging · Reel · Search</b></sub>
+  </div>
+</div>
 
 > 🔗 **Live deployment:** [https://connectly.app](https://connectly.app)
 
