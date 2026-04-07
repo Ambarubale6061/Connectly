@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 204 90% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 56%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 86%;
+    --input: 0 0% 86%;
+    --ring: 204 90% 52%;
+
+    --radius: 0.5rem;
+
+    /* Connectly custom tokens */
+    --instagram-gradient: linear-gradient(
+      45deg,
+      hsl(37 97% 56%),
+      hsl(340 82% 52%),
+      hsl(280 72% 50%)
+    );
+    --story-ring: conic-gradient(
+      hsl(37 97% 56%),
+      hsl(340 82% 52%),
+      hsl(280 72% 50%),
+      hsl(37 97% 56%)
+    );
+    --like-red: 0 100% 50%;
+    --link-blue: 204 90% 52%;
+    --verified-blue: 204 90% 52%;
+    --separator: 0 0% 92%;
+
+    /* Message theme - navy blue light */
+    --msg-bg: 220 30% 97%;
+    --msg-mine: 220 60% 45%;
+    --msg-mine-fg: 0 0% 100%;
+    --msg-other: 220 20% 92%;
+    --msg-active: 220 30% 93%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 0 0% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-ring: 204 90% 52%;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 93%;
+
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 93%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 93%;
+
+    --primary: 204 90% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 93%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 56%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 93%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 93%;
+
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
+    --ring: 204 90% 52%;
+
+    --separator: 0 0% 22%;
+
+    --msg-bg: 220 20% 8%;
+    --msg-mine: 220 60% 35%;
+    --msg-mine-fg: 0 0% 100%;
+    --msg-other: 220 15% 18%;
+    --msg-active: 220 15% 15%;
+
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 93%;
+    --sidebar-primary: 204 90% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 93%;
+    --sidebar-border: 0 0% 22%;
+    --sidebar-ring: 204 90% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family:
+      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+      sans-serif;
+  }
+}
+
+@layer utilities {
+  .story-ring {
+    background: var(--story-ring);
+  }
+
+  .instagram-gradient {
+    background: var(--instagram-gradient);
+  }
+
+  .like-animation {
+    animation: like-pop 0.3s ease-out;
+  }
+
+  @keyframes like-pop {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
