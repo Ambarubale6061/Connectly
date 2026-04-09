@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { PlusSquare, Image, Film, CircleUser, Plus, Sparkles } from 'lucide-react';
+import { PlusSquare, Image, Film, CircleUser } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,8 +20,8 @@ export function CreateMenu({ children }: CreateMenuProps) {
         {children ? (
           children
         ) : (
-          <button className="active:scale-90 transition-all p-1.5 outline-none bg-secondary/50 rounded-lg hover:bg-secondary" aria-label="Create">
-            <PlusSquare className="w-[24px] h-[24px] text-foreground stroke-[2]" />
+          <button className="active:scale-90 transition-all p-2 outline-none bg-white/5 hover:bg-white/10 rounded-full border border-white/10 backdrop-blur-md" aria-label="Create">
+            <PlusSquare className="w-6 h-6 text-foreground/80" />
           </button>
         )}
       </DropdownMenuTrigger>
@@ -30,51 +30,46 @@ export function CreateMenu({ children }: CreateMenuProps) {
         align="start" 
         side="right"
         sideOffset={16}
-        className="w-[240px] p-1.5 bg-background/80 backdrop-blur-2xl border-border/40 rounded-[22px] shadow-[0_20px_50px_rgba(0,0,0,0.2)] z-[100] animate-in fade-in zoom-in-95 duration-200"
+        /* मुख्य बॉक्स पूर्ण ट्रान्सपरंट केला आहे */
+        className="flex flex-col gap-3 p-2 bg-transparent border-none shadow-none z-[100] animate-in fade-in slide-in-from-left-2 duration-300"
       >
-        {/* Post Option */}
+        {/* --- Post Option --- */}
         <DropdownMenuItem 
           onClick={() => navigate('/create')}
-          className="flex items-center justify-between p-3 rounded-[14px] cursor-pointer focus:bg-primary focus:text-primary-foreground transition-all duration-200 group mb-1"
+          className="group relative flex items-center justify-center h-12 w-12 hover:w-36 rounded-full cursor-pointer bg-white/5 backdrop-blur-xl border border-white/10 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-blue-500/20 hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] focus:bg-blue-500"
         >
-          <div className="flex items-center gap-3">
-             <div className="p-2 bg-blue-500/10 rounded-lg group-focus:bg-white/20 transition-colors">
-                <Image className="h-4.5 w-4.5 text-blue-500 group-focus:text-white" />
-             </div>
-             <span className="font-semibold text-[15px] tracking-tight">Post</span>
+          <div className="flex items-center gap-3 overflow-hidden px-1">
+            <Image className="h-5 w-5 min-w-[20px] text-blue-400 group-hover:scale-110 group-focus:text-white transition-transform duration-300" />
+            <span className="max-w-0 opacity-0 group-hover:max-w-[80px] group-hover:opacity-100 group-focus:text-white transition-all duration-500 font-medium tracking-wide text-[14px] text-blue-400">
+              Post
+            </span>
           </div>
-          <Plus className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
         </DropdownMenuItem>
 
-        {/* Reel Option */}
+        {/* --- Reel Option --- */}
         <DropdownMenuItem 
           onClick={() => navigate('/create-reel')}
-          className="flex items-center justify-between p-3 rounded-[14px] cursor-pointer focus:bg-rose-500 focus:text-white transition-all duration-200 group mb-1"
+          className="group relative flex items-center justify-center h-12 w-12 hover:w-36 rounded-full cursor-pointer bg-white/5 backdrop-blur-xl border border-white/10 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-rose-500/20 hover:border-rose-500/50 hover:shadow-[0_0_20px_rgba(244,63,94,0.3)] focus:bg-rose-500"
         >
-          <div className="flex items-center gap-3">
-             <div className="p-2 bg-rose-500/10 rounded-lg group-focus:bg-white/20 transition-colors">
-                <Film className="h-4.5 w-4.5 text-rose-500 group-focus:text-white" />
-             </div>
-             <span className="font-semibold text-[15px] tracking-tight">Reel</span>
+          <div className="flex items-center gap-3 overflow-hidden px-1">
+            <Film className="h-5 w-5 min-w-[20px] text-rose-400 group-hover:scale-110 group-focus:text-white transition-transform duration-300" />
+            <span className="max-w-0 opacity-0 group-hover:max-w-[80px] group-hover:opacity-100 group-focus:text-white transition-all duration-500 font-medium tracking-wide text-[14px] text-rose-400">
+              Reel
+            </span>
           </div>
-          <Sparkles className="h-4 w-4 text-rose-400 opacity-0 group-hover:opacity-100 transition-opacity" />
         </DropdownMenuItem>
 
-        {/* Separator Line */}
-        <div className="h-[1px] bg-border/40 my-1.5 mx-2" />
-
-        {/* Story Option */}
+        {/* --- Story Option --- */}
         <DropdownMenuItem 
           onClick={() => navigate('/create-story')}
-          className="flex items-center justify-between p-3 rounded-[14px] cursor-pointer focus:bg-amber-500 focus:text-white transition-all duration-200 group"
+          className="group relative flex items-center justify-center h-12 w-12 hover:w-36 rounded-full cursor-pointer bg-white/5 backdrop-blur-xl border border-white/10 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-amber-500/20 hover:border-amber-500/50 hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] focus:bg-amber-500"
         >
-          <div className="flex items-center gap-3">
-             <div className="p-2 bg-amber-500/10 rounded-lg group-focus:bg-white/20 transition-colors">
-                <CircleUser className="h-4.5 w-4.5 text-amber-500 group-focus:text-white" />
-             </div>
-             <span className="font-semibold text-[15px] tracking-tight">Story</span>
+          <div className="flex items-center gap-3 overflow-hidden px-1">
+            <CircleUser className="h-5 w-5 min-w-[20px] text-amber-400 group-hover:scale-110 group-focus:text-white transition-transform duration-300" />
+            <span className="max-w-0 opacity-0 group-hover:max-w-[80px] group-hover:opacity-100 group-focus:text-white transition-all duration-500 font-medium tracking-wide text-[14px] text-amber-400">
+              Story
+            </span>
           </div>
-          <Plus className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
